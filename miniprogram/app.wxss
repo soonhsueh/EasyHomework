@@ -1,0 +1,86 @@
+/**
+ * 全局样式 — 小学数学练习题生成器
+ * 配色：蓝 #4A90D9 / 橙 #FF9500 / 绿 #34C759 / 背景 #FFF8F0
+ */
+
+/* ===== CSS 变量（全局生效） ===== */
+page {
+  --color-primary: #4A90D9;
+  --color-secondary: #FF9500;
+  --color-accent: #34C759;
+  --color-bg: #FFF8F0;
+  --color-card: #FFFFFF;
+  --color-text: #333333;
+  --color-text-secondary: #666666;
+  --color-text-light: #999999;
+  --color-border: #E0E0E0;
+
+  --radius-card: 20rpx;
+  --radius-btn: 16rpx;
+  --radius-tag: 8rpx;
+
+  --shadow-card: 0 4rpx 20rpx rgba(0, 0, 0, 0.08);
+  --shadow-btn: 0 8rpx 30rpx rgba(0, 0, 0, 0.15);
+
+  --spacing-page: 40rpx;
+  --spacing-card: 24rpx;
+  --spacing-inner: 24rpx;
+
+  background-color: var(--color-bg);
+  font-family: -apple-system, BlinkMacSystemFont, 'PingFang SC',
+    'Helvetica Neue', sans-serif;
+  font-size: 28rpx;
+  color: var(--color-text);
+  line-height: 1.6;
+}
+
+/* ===== 通用工具类 ===== */
+.container {
+  padding: var(--spacing-page);
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+
+.card {
+  background: var(--color-card);
+  border-radius: var(--radius-card);
+  box-shadow: var(--shadow-card);
+  padding: var(--spacing-inner);
+}
+
+.btn-primary {
+  background: var(--color-primary);
+  color: #FFFFFF;
+  border: none;
+  border-radius: var(--radius-btn);
+  font-size: 32rpx;
+  padding: 20rpx 48rpx;
+  text-align: center;
+}
+
+.btn-secondary {
+  background: var(--color-secondary);
+  color: #FFFFFF;
+  border: none;
+  border-radius: var(--radius-btn);
+  font-size: 32rpx;
+  padding: 20rpx 48rpx;
+  text-align: center;
+}
+
+.btn-accent {
+  background: var(--color-accent);
+  color: #FFFFFF;
+  border: none;
+  border-radius: var(--radius-btn);
+  font-size: 32rpx;
+  padding: 20rpx 48rpx;
+  text-align: center;
+}
+
+.btn-press {
+  transition: transform 0.15s;
+}
+.btn-press:active {
+  transform: scale(0.96);
+}

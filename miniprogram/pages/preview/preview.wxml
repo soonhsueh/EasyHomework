@@ -1,0 +1,77 @@
+<!-- 预览页 — 练习题预览 & 保存 -->
+
+<!-- 隐藏的 Canvas（仅用于离屏渲染，不显示） -->
+<canvas
+  type="2d"
+  id="worksheetCanvas"
+  class="offscreen-canvas"
+></canvas>
+
+<view class="container">
+  <!-- 信息栏 -->
+  <view class="info-bar">
+    <text class="info-grade">{{gradeLabel}}</text>
+    <text class="info-type">· {{typeLabel}}</text>
+  </view>
+
+  <!-- Tab 切换 -->
+  <view class="tab-bar">
+    <view
+      class="tab-item {{currentTab === 'question' ? 'active' : ''}}"
+      data-tab="question"
+      bindtap="onTabChange"
+    >
+      <text>练习题</text>
+    </view>
+    <view
+      class="tab-item {{currentTab === 'answer' ? 'active' : ''}}"
+      data-tab="answer"
+      bindtap="onTabChange"
+    >
+      <text>参考答案</text>
+    </view>
+  </view>
+
+  <!-- 图片预览区 -->
+  <view class="preview-area">
+    <!-- 加载中 -->
+    <view wx:if="{{loading}}" class="loading-box">
+      <text class="loading-icon">⏳</text>
+      <text class="loading-text">正在生成练习题...</text>
+    </view>
+
+    <!-- 题目图片 -->
+    <image
+      wx:if="{{!loading && currentTab === 'question' && questionImagePath}}"
+      class="preview-image"
+      src="{{questionImagePath}}"
+      mode="widthFix"
+      show-menu-by-longpress
+    />
+
+    <!-- 答案图片 -->
+    <image
+      wx:if="{{!loading && currentTab === 'answer' && answerImagePath}}"
+      class="preview-image"
+      src="{{answerImagePath}}"
+      mode="widthFix"
+      show-menu-by-longpress
+    />
+
+    <!-- 占位（无图片） -->
+    <view wx:if="{{!loading && !questionImagePath && !answerImagePath}}" class="placeholder-box">
+      <text class="placeholder-icon">📄</text>
+      <text class="placeholder-text">正在准备画布...</text>
+    </view>
+  </view>
+
+  <!-- 底部操作栏 -->
+  <view class="action-bar">
+    <button class="btn-regenerate btn-press" bindtap="onRegenerate">
+      🔄 换一题
+    </button>
+    <button class="btn-save btn-press" bindtap="onSaveImage">
+      💾 保存图片
+    </button>
+  </view>
+</view>

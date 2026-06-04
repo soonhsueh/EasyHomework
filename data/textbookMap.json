@@ -1,0 +1,367 @@
+{
+  "version": "北京版2012",
+  "description": "北京版小学数学教材内容映射，用于校准 curriculum.js 生成参数",
+  "grades": {
+    "1": {
+      "label": "一年级",
+      "semesters": {
+        "上": {
+          "units": [
+            {"name": "数学就在我身边", "topics": ["数一数", "分类观察"]},
+            {"name": "分类 比较", "topics": ["分类", "比较大小", "轻重", "高矮", "长短"]},
+            {"name": "认识10以内的数", "topics": ["1-5认识", "几和第几", "大于小于等于", "0", "6-10认识", "分与合"]},
+            {"name": "位置与顺序", "topics": ["前后", "上下", "左右"]},
+            {"name": "加法和减法（一）", "topics": ["5以内加减", "6-7加减", "8-9加减", "10的加减", "连加连减"]},
+            {"name": "认识图形", "topics": ["长方体", "正方体", "圆柱", "球"]},
+            {"name": "认识11-20各数", "topics": ["读写", "组成", "大小比较"]},
+            {"name": "学看钟表", "topics": ["整点", "半点"]},
+            {"name": "加法和减法（二）", "topics": ["凑十法", "20以内进位加", "退位减法（破十法）", "连加连减"]},
+            {"name": "总复习", "topics": ["全册综合"]}
+          ],
+          "numberRange": [0, 20],
+          "operations": {
+            "addition": {"maxResult": 20, "maxOperand": 20, "carry": true},
+            "subtraction": {"maxResult": 20, "maxOperand": 20, "borrow": true}
+          },
+          "vertical": {
+            "addition": {"digits": [1, 2], "carry": true},
+            "subtraction": {"digits": [2, 2], "borrow": true}
+          },
+          "availableTypes": ["addition", "subtraction", "vertical", "word_problems"],
+          "wordProblemSteps": 1
+        },
+        "下": {
+          "units": [
+            {"name": "认识100以内的数", "topics": ["数的顺序", "大小比较", "整十数加减"]},
+            {"name": "加法和减法（一）", "topics": ["两位数加减一位数", "整十数加减"]},
+            {"name": "认识人民币", "topics": ["元角分", "换算", "简单购物"]},
+            {"name": "加法和减法（二）", "topics": ["两位数加减两位数", "不进退位", "进退位"]},
+            {"name": "认识图形", "topics": ["长方形", "正方形", "三角形", "圆"]},
+            {"name": "分类", "topics": ["按标准分类", "整理数据"]},
+            {"name": "数学百花园", "topics": ["百数表", "探索规律"]},
+            {"name": "总复习", "topics": ["全册综合"]}
+          ],
+          "numberRange": [0, 100],
+          "operations": {
+            "addition": {"maxResult": 100, "maxOperand": 100, "carry": true},
+            "subtraction": {"maxResult": 100, "maxOperand": 100, "borrow": true}
+          },
+          "vertical": {
+            "addition": {"digits": [2, 2], "carry": true},
+            "subtraction": {"digits": [2, 2], "borrow": true}
+          },
+          "availableTypes": ["addition", "subtraction", "vertical", "word_problems"],
+          "wordProblemSteps": 1
+        }
+      }
+    },
+    "2": {
+      "label": "二年级",
+      "semesters": {
+        "上": {
+          "units": [
+            {"name": "认识厘米和米", "topics": ["厘米", "米", "1米=100厘米", "测量", "估测"]},
+            {"name": "表内乘法和除法（一）", "topics": ["乘法初步", "2-5乘法口诀", "除法初步（平均分）", "用口诀求商"]},
+            {"name": "观察物体", "topics": ["不同方向观察"]},
+            {"name": "平移与旋转", "topics": ["平移", "旋转"]},
+            {"name": "表内乘法和除法（二）", "topics": ["6-9乘法口诀", "用口诀求商", "乘除加减混合"]},
+            {"name": "数学百花园", "topics": ["有趣的数"]},
+            {"name": "总复习", "topics": ["全册综合"]}
+          ],
+          "numberRange": [0, 100],
+          "operations": {
+            "addition": {"maxResult": 100, "maxOperand": 100, "carry": true},
+            "subtraction": {"maxResult": 100, "maxOperand": 100, "borrow": true},
+            "multiplication": {"tableRange": [1, 9], "multiDigit": false},
+            "division": {"tableRange": [1, 9], "remainder": false, "multiDigit": false}
+          },
+          "vertical": {
+            "addition": {"digits": [2, 3], "carry": true},
+            "subtraction": {"digits": [2, 3], "borrow": true},
+            "multiplication": {"digits": [1, 2], "type": "table"},
+            "division": {"digits": [1, 2], "type": "table", "remainder": false}
+          },
+          "availableTypes": ["addition", "subtraction", "multiplication", "division", "mixed", "vertical", "word_problems"],
+          "wordProblemSteps": 2,
+          "mixedOperations": ["addition", "subtraction", "multiplication", "division"]
+        },
+        "下": {
+          "units": [
+            {"name": "有余数的除法", "topics": ["余数概念", "除法竖式", "余数与除数关系"]},
+            {"name": "混合运算", "topics": ["两步混合", "含括号运算", "解决问题"]},
+            {"name": "对称与方向", "topics": ["轴对称", "东南西北"]},
+            {"name": "万以内数的认识", "topics": ["1000以内", "10000以内", "读写", "组成", "近似数"]},
+            {"name": "万以内数的加法和减法", "topics": ["整千整百加减", "笔算加减法", "进位退位", "估算"]},
+            {"name": "解决问题", "topics": ["两步运算应用题"]},
+            {"name": "千克与克的认识", "topics": ["重量单位", "1千克=1000克"]},
+            {"name": "时、分、秒的认识", "topics": ["时分秒关系", "读钟表", "时间计算"]},
+            {"name": "收集数据", "topics": ["数据收集整理"]},
+            {"name": "数学百花园", "topics": ["探索规律"]},
+            {"name": "总复习", "topics": ["全册综合"]}
+          ],
+          "numberRange": [0, 10000],
+          "operations": {
+            "addition": {"maxResult": 10000, "maxOperand": 10000, "carry": true},
+            "subtraction": {"maxResult": 10000, "maxOperand": 10000, "borrow": true},
+            "multiplication": {"tableRange": [1, 9], "multiDigit": false},
+            "division": {"tableRange": [1, 9], "remainder": true, "multiDigit": false}
+          },
+          "vertical": {
+            "addition": {"digits": [3, 4], "carry": true},
+            "subtraction": {"digits": [3, 4], "borrow": true},
+            "multiplication": {"digits": [1, 2], "type": "table"},
+            "division": {"digits": [2, 3], "type": "table", "remainder": true}
+          },
+          "availableTypes": ["addition", "subtraction", "multiplication", "division", "mixed", "vertical", "word_problems"],
+          "wordProblemSteps": 2,
+          "mixedOperations": ["addition", "subtraction", "multiplication", "division"]
+        }
+      }
+    },
+    "3": {
+      "label": "三年级",
+      "semesters": {
+        "上": {
+          "units": [
+            {"name": "乘法", "topics": ["口算乘法", "多位数乘一位数笔算"]},
+            {"name": "千米、分米和毫米的认识", "topics": ["千米", "分米", "毫米", "长度单位换算"]},
+            {"name": "除法", "topics": ["两位数除以一位数笔算", "有余数除法"]},
+            {"name": "解决问题", "topics": ["乘除两步应用"]},
+            {"name": "角的初步认识", "topics": ["角的认识", "直角", "锐角", "钝角"]},
+            {"name": "长方形和正方形的周长", "topics": ["特征认识", "周长计算"]},
+            {"name": "24时计时法", "topics": ["24时与12时转换", "时间计算"]},
+            {"name": "数学百花园", "topics": ["等量代换", "合理搭配"]}
+          ],
+          "numberRange": [0, 10000],
+          "operations": {
+            "addition": {"maxResult": 10000, "maxOperand": 10000},
+            "subtraction": {"maxResult": 10000, "maxOperand": 10000},
+            "multiplication": {"tableRange": [1, 9], "multiDigit": true, "digits1": [2, 3], "digits2": [1, 1]},
+            "division": {"tableRange": [1, 9], "remainder": true, "multiDigit": true, "digits1": [2, 2], "digits2": [1, 1]}
+          },
+          "vertical": {
+            "addition": {"digits": [3, 4], "carry": true},
+            "subtraction": {"digits": [3, 4], "borrow": true},
+            "multiplication": {"digits": [2, 3], "digits2": [1, 1], "type": "multi"},
+            "division": {"digits": [2, 2], "digits2": [1, 1], "type": "multi", "remainder": true}
+          },
+          "availableTypes": ["addition", "subtraction", "multiplication", "division", "mixed", "vertical", "word_problems"],
+          "wordProblemSteps": 2,
+          "mixedOperations": ["addition", "subtraction", "multiplication", "division"]
+        },
+        "下": {
+          "units": [
+            {"name": "年、月、日", "topics": ["年月日关系", "平年闰年", "日历"]},
+            {"name": "乘法", "topics": ["两位数乘两位数笔算"]},
+            {"name": "吨的认识", "topics": ["吨", "1吨=1000千克", "重量换算"]},
+            {"name": "解决问题", "topics": ["连乘连除应用"]},
+            {"name": "长方形和正方形的面积", "topics": ["面积概念", "面积单位", "面积公式", "单位进率"]},
+            {"name": "分数的初步认识", "topics": ["几分之一", "几分之几", "同分母比较", "同分母加减"]},
+            {"name": "小数的初步认识", "topics": ["小数读写", "大小比较", "一位小数加减"]},
+            {"name": "认识方向", "topics": ["八个方向"]},
+            {"name": "整理数据", "topics": ["数据分类整理"]},
+            {"name": "数学百花园", "topics": ["比较", "合理安排时间"]}
+          ],
+          "numberRange": [0, 100000],
+          "operations": {
+            "addition": {"maxResult": 100000, "maxOperand": 100000},
+            "subtraction": {"maxResult": 100000, "maxOperand": 100000},
+            "multiplication": {"tableRange": [1, 9], "multiDigit": true, "digits1": [2, 3], "digits2": [2, 2]},
+            "division": {"tableRange": [1, 9], "remainder": true, "multiDigit": true, "digits1": [3, 4], "digits2": [1, 2]},
+            "decimal": {"decimalPlaces": 1, "operations": ["add", "subtract"]},
+            "fraction": {"denominator": "same", "operations": ["add", "subtract"]}
+          },
+          "vertical": {
+            "addition": {"digits": [4, 5], "carry": true},
+            "subtraction": {"digits": [4, 5], "borrow": true},
+            "multiplication": {"digits": [2, 3], "digits2": [2, 2], "type": "multi"},
+            "division": {"digits": [3, 4], "digits2": [1, 2], "type": "multi", "remainder": true}
+          },
+          "availableTypes": ["addition", "subtraction", "multiplication", "division", "mixed", "vertical", "word_problems"],
+          "wordProblemSteps": 2
+        }
+      }
+    },
+    "4": {
+      "label": "四年级",
+      "semesters": {
+        "上": {
+          "units": [
+            {"name": "大数的认识", "topics": ["亿以内读写", "大小比较", "改写", "近似数"]},
+            {"name": "乘法", "topics": ["三位数乘两位数", "积的变化规律"]},
+            {"name": "运算定律", "topics": ["加法交换律/结合律", "乘法交换律/结合律/分配律"]},
+            {"name": "线与角", "topics": ["线段/直线/射线", "角的度量", "平角/周角", "画角"]},
+            {"name": "方向与位置", "topics": ["方向距离", "数对"]},
+            {"name": "除法", "topics": ["除数是两位数", "商不变性质", "经济问题", "行程问题"]},
+            {"name": "用计算器探索规律", "topics": ["计算器使用", "规律探索"]},
+            {"name": "条形统计图", "topics": ["1格表示1/多个单位"]},
+            {"name": "可能性", "topics": ["确定不确定", "可能性大小"]},
+            {"name": "数学百花园", "topics": ["重叠问题", "方阵问题", "编码"]}
+          ],
+          "numberRange": [0, 100000000],
+          "operations": {
+            "addition": {"maxResult": 100000000, "maxOperand": 100000000},
+            "subtraction": {"maxResult": 100000000, "maxOperand": 100000000},
+            "multiplication": {"multiDigit": true, "digits1": [3, 4], "digits2": [2, 2]},
+            "division": {"multiDigit": true, "digits1": [4, 5], "digits2": [2, 2], "remainder": false}
+          },
+          "vertical": {
+            "addition": {"digits": [5, 7], "carry": true},
+            "subtraction": {"digits": [5, 7], "borrow": true},
+            "multiplication": {"digits": [3, 3], "digits2": [2, 2], "type": "multi"},
+            "division": {"digits": [4, 5], "digits2": [2, 2], "type": "multi", "remainder": false}
+          },
+          "availableTypes": ["addition", "subtraction", "multiplication", "division", "mixed", "vertical", "word_problems"],
+          "wordProblemSteps": 3
+        },
+        "下": {
+          "units": [
+            {"name": "小数", "topics": ["小数意义性质", "大小比较", "改写与近似数"]},
+            {"name": "小数加、减法", "topics": ["小数加减", "小数加减混合运算"]},
+            {"name": "平行与相交", "topics": ["平行特征", "画平行线", "垂直特征", "画垂线", "点到直线距离"]},
+            {"name": "图形变换", "topics": ["平移旋转", "轴对称", "三视图", "图形设计"]},
+            {"name": "解决问题", "topics": ["相遇问题", "植树问题"]},
+            {"name": "生活中的负数", "topics": ["温度", "正负数读写", "大小比较"]},
+            {"name": "统计表", "topics": ["统计表", "平均数"]},
+            {"name": "数学百花园", "topics": ["鸽巢初步", "和差问题"]}
+          ],
+          "numberRange": [0, 100000000],
+          "operations": {
+            "addition": {"maxResult": 100000000, "maxOperand": 100000000},
+            "subtraction": {"maxResult": 100000000, "maxOperand": 100000000},
+            "multiplication": {"multiDigit": true, "digits1": [3, 4], "digits2": [2, 3]},
+            "division": {"multiDigit": true, "digits1": [4, 6], "digits2": [2, 3], "remainder": false},
+            "decimal": {"decimalPlaces": 2, "operations": ["add", "subtract", "multiply", "divide"]}
+          },
+          "vertical": {
+            "addition": {"digits": [5, 8], "carry": true},
+            "subtraction": {"digits": [5, 8], "borrow": true},
+            "multiplication": {"digits": [3, 4], "digits2": [2, 3], "type": "multi"},
+            "division": {"digits": [4, 6], "digits2": [2, 3], "type": "multi"}
+          },
+          "availableTypes": ["addition", "subtraction", "multiplication", "division", "mixed", "vertical", "word_problems"],
+          "wordProblemSteps": 3
+        }
+      }
+    },
+    "5": {
+      "label": "五年级",
+      "semesters": {
+        "上": {
+          "units": [
+            {"name": "小数乘法", "topics": ["小数乘整数", "小数乘小数", "估算", "积的近似值"]},
+            {"name": "小数除法", "topics": ["小数除以整数", "小数除以小数", "商的近似值", "循环小数"]},
+            {"name": "平行四边形、梯形和三角形", "topics": ["特征", "面积公式", "组合图形", "千米²/公顷"]},
+            {"name": "统计图表与可能性", "topics": ["统计表", "平均数", "统计图", "可能性"]},
+            {"name": "方程", "topics": ["用字母表示数", "方程意义", "解简易方程"]},
+            {"name": "数学百花园", "topics": ["密铺", "鸡兔同笼"]}
+          ],
+          "numberRange": [0, 100000000],
+          "operations": {
+            "addition": {"maxResult": 100000000},
+            "subtraction": {"maxResult": 100000000},
+            "multiplication": {"multiDigit": true, "digits1": [3, 5], "digits2": [2, 4]},
+            "division": {"multiDigit": true, "digits1": [4, 6], "digits2": [2, 4]},
+            "decimal": {"decimalPlaces": 2, "operations": ["add", "subtract", "multiply", "divide"]}
+          },
+          "vertical": {
+            "addition": {"digits": [5, 9], "carry": true},
+            "subtraction": {"digits": [5, 9], "borrow": true},
+            "multiplication": {"digits": [3, 4], "digits2": [2, 3], "type": "multi"},
+            "division": {"digits": [4, 6], "digits2": [2, 3], "type": "multi"}
+          },
+          "availableTypes": ["addition", "subtraction", "multiplication", "division", "mixed", "vertical", "word_problems"],
+          "wordProblemSteps": 3
+        },
+        "下": {
+          "units": [
+            {"name": "长方体和正方体", "topics": ["认识", "表面积", "体积", "体积单位", "容积"]},
+            {"name": "折线统计图与可能性", "topics": ["单式/复式折线统计图", "可能性"]},
+            {"name": "因数和倍数", "topics": ["因数倍数", "2/5/3倍数特征", "质数合数", "公因数/公倍数"]},
+            {"name": "分数的意义和基本性质", "topics": ["分数意义", "真假分数", "基本性质", "约分", "通分", "分数小数互化"]},
+            {"name": "分数的加法和减法", "topics": ["同分母加减", "异分母加减", "分数加减混合"]},
+            {"name": "数学百花园", "topics": ["露在外面的面", "剪纸中的数学"]}
+          ],
+          "numberRange": [0, 100000000],
+          "operations": {
+            "addition": {"maxResult": 100000000},
+            "subtraction": {"maxResult": 100000000},
+            "multiplication": {"multiDigit": true, "digits1": [3, 5], "digits2": [3, 4]},
+            "division": {"multiDigit": true, "digits1": [5, 7], "digits2": [2, 4]},
+            "decimal": {"decimalPlaces": 3, "operations": ["add", "subtract", "multiply", "divide"]},
+            "fraction": {"denominator": "diff", "operations": ["add", "subtract"]}
+          },
+          "vertical": {
+            "addition": {"digits": [5, 9], "carry": true},
+            "subtraction": {"digits": [5, 9], "borrow": true},
+            "multiplication": {"digits": [3, 4], "digits2": [2, 3], "type": "multi"},
+            "division": {"digits": [4, 6], "digits2": [2, 3], "type": "multi"}
+          },
+          "availableTypes": ["addition", "subtraction", "multiplication", "division", "mixed", "vertical", "word_problems"],
+          "wordProblemSteps": 3
+        }
+      }
+    },
+    "6": {
+      "label": "六年级",
+      "semesters": {
+        "上": {
+          "units": [
+            {"name": "分数乘法", "topics": ["分数乘整数", "分数乘分数", "分数连乘", "倒数"]},
+            {"name": "分数除法", "topics": ["分数除以整数", "分数除以分数", "分数乘除混合"]},
+            {"name": "百分数", "topics": ["百分数意义", "百分数小数分数互化", "生活中的百分数"]},
+            {"name": "解决问题", "topics": ["工程问题", "利息", "多/少百分之几"]},
+            {"name": "圆", "topics": ["圆的认识", "圆的周长", "圆的面积", "扇形"]},
+            {"name": "扇形统计图", "topics": ["扇形统计图"]},
+            {"name": "数学百花园", "topics": ["黄金螺旋线"]}
+          ],
+          "numberRange": [0, 100000000],
+          "operations": {
+            "addition": {"maxResult": 100000000},
+            "subtraction": {"maxResult": 100000000},
+            "multiplication": {"multiDigit": true, "digits1": [3, 6], "digits2": [3, 5]},
+            "division": {"multiDigit": true, "digits1": [5, 8], "digits2": [2, 4]},
+            "decimal": {"decimalPlaces": 3, "operations": ["add", "subtract", "multiply", "divide"]},
+            "fraction": {"denominator": "diff", "operations": ["add", "subtract", "multiply", "divide"]},
+            "percentage": true
+          },
+          "vertical": {
+            "addition": {"digits": [5, 9], "carry": true},
+            "subtraction": {"digits": [5, 9], "borrow": true},
+            "multiplication": {"digits": [3, 5], "digits2": [3, 4], "type": "multi"},
+            "division": {"digits": [5, 7], "digits2": [2, 4], "type": "multi"}
+          },
+          "availableTypes": ["addition", "subtraction", "multiplication", "division", "mixed", "vertical", "word_problems"],
+          "wordProblemSteps": 4
+        },
+        "下": {
+          "units": [
+            {"name": "圆柱和圆锥", "topics": ["圆柱认识/表面积/体积", "圆锥认识/体积"]},
+            {"name": "比和比例", "topics": ["比的意义应用", "比例意义", "比例尺", "正比例/反比例", "图形放大缩小"]},
+            {"name": "数学百花园", "topics": ["黄金比"]},
+            {"name": "总复习", "topics": ["数与代数", "图形与几何", "统计与可能性"]}
+          ],
+          "numberRange": [0, 100000000],
+          "operations": {
+            "addition": {"maxResult": 100000000},
+            "subtraction": {"maxResult": 100000000},
+            "multiplication": {"multiDigit": true, "digits1": [4, 6], "digits2": [3, 5]},
+            "division": {"multiDigit": true, "digits1": [5, 8], "digits2": [3, 5]},
+            "decimal": {"decimalPlaces": 3, "operations": ["add", "subtract", "multiply", "divide"]},
+            "fraction": {"denominator": "diff", "operations": ["add", "subtract", "multiply", "divide"]},
+            "ratio": true,
+            "percentage": true
+          },
+          "vertical": {
+            "addition": {"digits": [5, 9], "carry": true},
+            "subtraction": {"digits": [5, 9], "borrow": true},
+            "multiplication": {"digits": [3, 5], "digits2": [3, 4], "type": "multi"},
+            "division": {"digits": [5, 8], "digits2": [3, 4], "type": "multi"}
+          },
+          "availableTypes": ["addition", "subtraction", "multiplication", "division", "mixed", "vertical", "word_problems"],
+          "wordProblemSteps": 4
+        }
+      }
+    }
+  }
+}

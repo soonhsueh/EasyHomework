@@ -1,0 +1,41 @@
+<!-- 首页 — 年级选择 -->
+<view class="container">
+  <!-- 标题区 -->
+  <view class="header">
+    <text class="header-icon">🧮</text>
+    <text class="header-title">出题易</text>
+    <text class="header-subtitle">选择年级，开始练习</text>
+  </view>
+
+  <!-- 年级卡片网格 -->
+  <view class="grade-grid">
+    <view
+      wx:for="{{grades}}"
+      wx:key="id"
+      class="grade-card btn-press"
+      style="background: linear-gradient(135deg, {{item.color1}}, {{item.color2}});"
+      data-grade="{{item.id}}"
+      bindtap="onGradeTap"
+    >
+      <text class="grade-num">{{item.id}}</text>
+      <text class="grade-label">{{item.label}}</text>
+    </view>
+  </view>
+
+  <!-- 科目切换栏 -->
+  <view class="subject-bar">
+    <view
+      wx:for="{{subjects}}"
+      wx:key="*this"
+      wx:for-index="key"
+      wx:for-item="subject"
+      class="subject-item {{currentSubject === key ? 'active' : ''}} {{subject.active ? '' : 'disabled'}}"
+      data-subject="{{key}}"
+      bindtap="onSubjectTap"
+    >
+      <text class="subject-icon">{{subject.icon}}</text>
+      <text class="subject-name">{{subject.name}}</text>
+      <view wx:if="{{!subject.active}}" class="subject-badge">即将推出</view>
+    </view>
+  </view>
+</view>

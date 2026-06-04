@@ -1,0 +1,158 @@
+/**
+ * 预览页样式
+ */
+
+/* 离屏 Canvas（用于渲染，不可见） */
+.offscreen-canvas {
+  position: fixed;
+  left: -9999px;
+  top: 0;
+  width: 1240px;
+  height: 1754px;
+}
+
+/* 信息栏 */
+.info-bar {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  padding: 24rpx 0 16rpx;
+}
+
+.info-grade {
+  font-size: 32rpx;
+  font-weight: 600;
+  color: var(--color-primary);
+}
+
+.info-type {
+  font-size: 28rpx;
+  color: var(--color-text-secondary);
+}
+
+/* Tab 切换 */
+.tab-bar {
+  display: flex;
+  background: var(--color-card);
+  border-radius: var(--radius-btn);
+  margin: 0 80rpx 24rpx;
+  overflow: hidden;
+}
+
+.tab-item {
+  flex: 1;
+  text-align: center;
+  padding: 16rpx 0;
+  font-size: 28rpx;
+  color: var(--color-text-secondary);
+  border-radius: var(--radius-btn);
+  transition: all 0.2s;
+}
+
+.tab-item.active {
+  background: var(--color-primary);
+  color: #FFFFFF;
+  font-weight: 500;
+}
+
+/* 预览区 */
+.preview-area {
+  flex: 1;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  background: var(--color-card);
+  border-radius: var(--radius-card);
+  box-shadow: var(--shadow-card);
+  min-height: 800rpx;
+  margin-bottom: var(--spacing-card);
+  overflow-y: auto;
+}
+
+.preview-image {
+  width: 100%;
+  border-radius: var(--radius-card);
+}
+
+/* 加载 */
+.loading-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 200rpx;
+}
+
+.loading-icon {
+  font-size: 64rpx;
+  margin-bottom: 16rpx;
+  animation: spin 1.5s linear infinite;
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.loading-text {
+  font-size: 28rpx;
+  color: var(--color-text-secondary);
+}
+
+/* 占位 */
+.placeholder-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 200rpx;
+}
+
+.placeholder-icon {
+  font-size: 96rpx;
+  margin-bottom: 16rpx;
+}
+
+.placeholder-text {
+  font-size: 28rpx;
+  color: var(--color-text-light);
+}
+
+/* 底部操作栏 */
+.action-bar {
+  display: flex;
+  gap: var(--spacing-card);
+  padding-bottom: env(safe-area-inset-bottom);
+}
+
+.btn-regenerate {
+  flex: 1;
+  background: var(--color-card);
+  color: var(--color-primary);
+  border: 2rpx solid var(--color-primary);
+  border-radius: var(--radius-btn);
+  font-size: 30rpx;
+  padding: 24rpx 0;
+  text-align: center;
+  line-height: 1;
+}
+
+.btn-save {
+  flex: 1;
+  background: var(--color-secondary);
+  color: #FFFFFF;
+  border: none;
+  border-radius: var(--radius-btn);
+  font-size: 30rpx;
+  padding: 24rpx 0;
+  text-align: center;
+  line-height: 1;
+}
+
+/* 去掉 button 默认样式 */
+button {
+  margin: 0;
+  padding: 0;
+}
+
+button::after {
+  border: none;
+}
